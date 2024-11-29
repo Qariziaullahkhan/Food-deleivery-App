@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/constants/assets.dart';
 import 'package:food_delivery_app/constants/colors.dart';
 import 'package:food_delivery_app/routes/app_routes.dart';
 import 'package:food_delivery_app/widgets/custom_textfield.dart';
@@ -64,7 +65,9 @@ class _LoginViewState extends State<LoginView> {
               alignment: Alignment.centerRight,
               child: TextButton(
                 onPressed: () {
-                  // Handle forgot password logic
+
+                  Get.toNamed(AppRoutes.forgPasword); 
+                  //assword logic
                 },
                 child: const Text(
                   'Forgot Password?',
@@ -114,6 +117,7 @@ class _LoginViewState extends State<LoginView> {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8.0),
                   child: Text('or Sign in with'),
+
                 ),
                 Expanded(
                   child: Divider(
@@ -126,6 +130,48 @@ class _LoginViewState extends State<LoginView> {
               ],
             ),
             const SizedBox(height: 10),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,  
+              children: [
+                Container(
+                  decoration:const  BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    icon: Image.asset(Assets.google),
+                    iconSize: 40, // Adjusted size for better visibility
+                    onPressed: () {
+                      // Google login logic
+                    },
+                  ),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    icon: Image.asset(Assets.facebook),
+                    iconSize: 40,
+                    onPressed: () {
+                      // Facebook login logic
+                    },
+                  ),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    icon: Image.asset(Assets.apple),
+                    iconSize: 40,
+                    onPressed: () {
+                      // Apple login logic
+                    },
+                  ),
+                ),
+              ],
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

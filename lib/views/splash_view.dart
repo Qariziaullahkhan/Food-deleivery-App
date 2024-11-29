@@ -190,7 +190,7 @@ class _SplashViewState extends State<SplashView> {
           margin: const EdgeInsets.symmetric(horizontal: 5),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: i == _currentPage ? AppColors.primary : Colors.grey,
+            color: i == _currentPage ? AppColors.secondary : Colors.white,
           ),
         ),
       );

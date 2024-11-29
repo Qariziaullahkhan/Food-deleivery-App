@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/constants/assets.dart';
 import 'package:food_delivery_app/constants/colors.dart';
 import 'package:food_delivery_app/routes/app_routes.dart';
 import 'package:food_delivery_app/widgets/custom_textfield.dart';
@@ -88,6 +89,47 @@ class _RegisterViewState extends State<RegisterView> {
                     ),
                   ],
                 ),
+                 Row(
+              mainAxisAlignment: MainAxisAlignment.center,  
+              children: [
+                Container(
+                  decoration:const  BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    icon: Image.asset(Assets.google),
+                    iconSize: 40, // Adjusted size for better visibility
+                    onPressed: () {
+                      // Google login logic
+                    },
+                  ),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    icon: Image.asset(Assets.facebook),
+                    iconSize: 40,
+                    onPressed: () {
+                      // Facebook login logic
+                    },
+                  ),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    icon: Image.asset(Assets.apple),
+                    iconSize: 40,
+                    onPressed: () {
+                      // Apple login logic
+                    },
+                  ),
+                ),
+              ],
+            ),
                 const SizedBox(height: 16.0),
                 SizedBox(
                   height: 50,
