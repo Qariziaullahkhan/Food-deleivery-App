@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery_app/constants/colors.dart';
 import 'package:food_delivery_app/widgets/custom_textfield.dart';
 import 'package:get/get.dart';
+import 'package:food_delivery_app/views/email_verification_view.dart';
 
 class ForgotPasswordView extends StatefulWidget {
   const ForgotPasswordView({super.key});
@@ -29,6 +30,7 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
               const SizedBox(height: 20),
               const Text('Email Address', style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),),
               const SizedBox(height: 10),
+              
               CustomTextField(controller: _emailController, hintText: "Enter your email address"),
               const SizedBox(height: 20),
               Center(
@@ -42,7 +44,9 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                         borderRadius: BorderRadius.circular(30.0),
                       ),
                     ),
-                    onPressed: (){},
+                    onPressed: (){
+                      Get.to(() => const EmailVerificationView());
+                    },
                     child: const Text("Continue", style: TextStyle(color: Colors.white),),
                   ),
                 ),
